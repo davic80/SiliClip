@@ -5,14 +5,9 @@ inhibit_all_warnings!
 target 'Clipy' do
 
   # Application
-  pod 'PINCache'
   pod 'Sparkle'
   pod 'RealmSwift'
-  pod 'RxCocoa'
-  pod 'RxSwift'
-  pod 'AEXML'
   pod 'LetsMove'
-  pod 'SwiftHEXColors'
   # Utility
   pod 'BartyCrouch'
   pod 'SwiftGen'
