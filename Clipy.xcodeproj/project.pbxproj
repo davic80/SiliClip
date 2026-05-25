@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 100;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54C29D52FC3E20000EF30FB /* SQLiteDataDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C29D42FC3E1FD00EF30FB /* SQLiteDataDatabase.swift */; };
+		C54C29D72FC3E21400EF30FB /* SQLiteDataMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C29D62FC3E21000EF30FB /* SQLiteDataMigrator.swift */; };
+		C54C29D92FC3E22000EF30FB /* SQLIteDataSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C29D82FC3E21A00EF30FB /* SQLIteDataSchema.swift */; };
 		C576AD7C2FBD345000B71213 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C576AD7B2FBD345000B71213 /* Localizable.xcstrings */; };
+		C587AF512FBF4E040043D5E7 /* SQLiteData in Frameworks */ = {isa = PBXBuildFile; productRef = C587AF502FBF4E040043D5E7 /* SQLiteData */; };
 		C5A6BA742FBC5A6E00C8B9EB /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = C5A6BA732FBC5A6E00C8B9EB /* Sparkle */; };
 		C5D220A82FBD2655005CD45E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C5D220A72FBD2655005CD45E /* RealmSwift */; };
 		C5D3A75C2FB869EA00C9DCB6 /* Sauce in Frameworks */ = {isa = PBXBuildFile; productRef = C5D3A75B2FB869EA00C9DCB6 /* Sauce */; };
@@ -74,8 +78,8 @@
 		FA6167921D3ABEB10049FA14 /* FolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6167911D3ABEB10049FA14 /* FolderTests.swift */; };
 		FA6167941D3ACCB90049FA14 /* DraggedDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6167931D3ACCB90049FA14 /* DraggedDataTests.swift */; };
 		FA6167961D3ACDD80049FA14 /* SnippetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6167951D3ACDD80049FA14 /* SnippetTests.swift */; };
-		FA6DD5141C7DEDB600317E73 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		FA6DD5151C7DEDB600317E73 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		FA6DD5141C7DEDB600317E73 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		FA6DD5151C7DEDB600317E73 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		FAA4BCCC2163DC9100FF5D18 /* AccessibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4BCCB2163DC9100FF5D18 /* AccessibilityService.swift */; };
 		FAC0DCE91DE15FD900309C49 /* DataCleanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0DCE81DE15FD900309C49 /* DataCleanService.swift */; };
 		FAC0DCEF1DE3255E00309C49 /* NSImage+NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0DCEE1DE3255E00309C49 /* NSImage+NSColor.swift */; };
@@ -102,13 +106,11 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		FAC43E1D1B35DF4A00C06102 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolder = Frameworks;
 			files = (
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -144,6 +146,9 @@
 		8460049C1FD5511900BA733E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/CPYTypePreferenceViewController.strings; sourceTree = "<group>"; };
 		8460049D1FD5511A00BA733E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/CPYUpdatesPreferenceViewController.strings; sourceTree = "<group>"; };
 		8460049E1FD5511A00BA733E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/CPYSnippetsEditorWindowController.strings; sourceTree = "<group>"; };
+		C54C29D42FC3E1FD00EF30FB /* SQLiteDataDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDataDatabase.swift; sourceTree = "<group>"; };
+		C54C29D62FC3E21000EF30FB /* SQLiteDataMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDataMigrator.swift; sourceTree = "<group>"; };
+		C54C29D82FC3E21A00EF30FB /* SQLIteDataSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLIteDataSchema.swift; sourceTree = "<group>"; };
 		C576AD7B2FBD345000B71213 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C5F1B7321FF74A2D00D2DA83 /* NSPasteboard+Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPasteboard+Deprecated.swift"; sourceTree = "<group>"; };
 		FA08EDF71D1FED7D000D1D13 /* HotKeyServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKeyServiceTests.swift; sourceTree = "<group>"; };
@@ -224,8 +229,8 @@
 /* Begin PBXFrameworksBuildPhase section */
 		FAC43DC31B35D8B100C06102 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
+				C587AF512FBF4E040043D5E7 /* SQLiteData in Frameworks */,
 				C5E3D0512FB43570005D632A /* Screeen in Frameworks */,
 				FAC43E2B1B35DFDF00C06102 /* WebKit.framework in Frameworks */,
 				C5D76DAB2FBA9D2E0083839F /* SwiftHEXColors in Frameworks */,
@@ -244,14 +249,11 @@
 				C5D3A75C2FB869EA00C9DCB6 /* Sauce in Frameworks */,
 				C5D3A7622FB86A1C00C9DCB6 /* KeyHolder in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FAC43DD51B35D8B100C06102 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -266,6 +268,16 @@
 				FAC43E221B35DFC800C06102 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C54C29D32FC3E1F500EF30FB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				C54C29D42FC3E1FD00EF30FB /* SQLiteDataDatabase.swift */,
+				C54C29D82FC3E21A00EF30FB /* SQLIteDataSchema.swift */,
+				C54C29D62FC3E21000EF30FB /* SQLiteDataMigrator.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		FA06D2D21DD882BD002FB7C2 /* Resources */ = {
@@ -302,6 +314,7 @@
 		FA1DB49C1DDCB3FB007F95C8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C54C29D32FC3E1F500EF30FB /* Database */,
 				FA3778911F3B690D003B5BAB /* Environments */,
 				FA0D5CE61DDCC5D000AC9052 /* Services */,
 				FA1DB4EC1DDCB4C0007F95C8 /* Preferences */,
@@ -591,7 +604,6 @@
 				};
 			};
 			buildConfigurationList = FAC43DC11B35D8B100C06102 /* Build configuration list for PBXProject "Clipy" */;
-			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -616,7 +628,9 @@
 				C5D76DA92FBA9D2E0083839F /* XCRemoteSwiftPackageReference "SwiftHEXColors" */,
 				C5A6BA722FBC5A6E00C8B9EB /* XCRemoteSwiftPackageReference "Sparkle" */,
 				C5D220A62FBD2655005CD45E /* XCRemoteSwiftPackageReference "realm-swift" */,
+				C587AF4F2FBF4E040043D5E7 /* XCRemoteSwiftPackageReference "sqlite-data" */,
 			);
+			preferredProjectObjectVersion = 46;
 			productRefGroup = FAC43DC71B35D8B100C06102 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -630,10 +644,9 @@
 /* Begin PBXResourcesBuildPhase section */
 		FAC43DC41B35D8B100C06102 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				FA1DB5131DDCB4C0007F95C8 /* CPYPreferencesWindowController.xib in Resources */,
-				FA6DD5141C7DEDB600317E73 /* BuildFile in Resources */,
+				FA6DD5141C7DEDB600317E73 /* (null) in Resources */,
 				FA1DB51E1DDCB4C0007F95C8 /* CPYTypePreferenceViewController.xib in Resources */,
 				FA1DB4901DDCA5D9007F95C8 /* Assets.xcassets in Resources */,
 				FA1DB51D1DDCB4C0007F95C8 /* CPYShortcutsPreferenceViewController.xib in Resources */,
@@ -642,30 +655,27 @@
 				FA1DB51B1DDCB4C0007F95C8 /* CPYGeneralPreferenceViewController.xib in Resources */,
 				FA1DB51A1DDCB4C0007F95C8 /* CPYExcludeAppPreferenceViewController.xib in Resources */,
 				FA1DB5191DDCB4C0007F95C8 /* CPYBetaPreferenceViewController.xib in Resources */,
-				FA6DD5151C7DEDB600317E73 /* BuildFile in Resources */,
+				FA6DD5151C7DEDB600317E73 /* (null) in Resources */,
 				C576AD7C2FBD345000B71213 /* Localizable.xcstrings in Resources */,
 				FA1DB4941DDCB22C007F95C8 /* dsa_pub.pem in Resources */,
 				FA1DB49F1DDCB417007F95C8 /* MainMenu.xib in Resources */,
 				FA1DB5221DDCB4C0007F95C8 /* CPYSnippetsEditorWindowController.xib in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FAC43DD61B35D8B100C06102 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAC43DC21B35D8B100C06102 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				FAC0DCEF1DE3255E00309C49 /* NSImage+NSColor.swift in Sources */,
 				FA1DB4A61DDCB443007F95C8 /* MenuType.swift in Sources */,
+				C54C29D52FC3E20000EF30FB /* SQLiteDataDatabase.swift in Sources */,
 				FA1DB4B31DDCB452007F95C8 /* Array+Remove.swift in Sources */,
 				FA3778931F3B691A003B5BAB /* AppEnvironment.swift in Sources */,
 				FAC0DCF11DE576F300309C49 /* PasteService.swift in Sources */,
@@ -694,6 +704,7 @@
 				FA1DB4D41DDCB479007F95C8 /* CPYClipData.swift in Sources */,
 				FA1DB4B71DDCB452007F95C8 /* NSImage+Resize.swift in Sources */,
 				FA1DB4D51DDCB479007F95C8 /* CPYDraggedData.swift in Sources */,
+				C54C29D92FC3E22000EF30FB /* SQLIteDataSchema.swift in Sources */,
 				FA1DB5151DDCB4C0007F95C8 /* CPYExcludeAppPreferenceViewController.swift in Sources */,
 				FA1DB4EA1DDCB49C007F95C8 /* CPYSnippetsEditorCell.swift in Sources */,
 				FA1DB5161DDCB4C0007F95C8 /* CPYShortcutsPreferenceViewController.swift in Sources */,
@@ -707,31 +718,29 @@
 				FA1DB4BB1DDCB452007F95C8 /* Realm+Migration.swift in Sources */,
 				FA1DB5121DDCB4C0007F95C8 /* CPYPreferencesWindowController.swift in Sources */,
 				FAE911BB1DE054F1008A4BEC /* NSCoding+Archive.swift in Sources */,
+				C54C29D72FC3E21400EF30FB /* SQLiteDataMigrator.swift in Sources */,
 				FA3778951F3B6920003B5BAB /* Environment.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FAC43DD41B35D8B100C06102 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				FA6167921D3ABEB10049FA14 /* FolderTests.swift in Sources */,
 				FA08EDF81D1FED7D000D1D13 /* HotKeyServiceTests.swift in Sources */,
 				FA6167961D3ACDD80049FA14 /* SnippetTests.swift in Sources */,
 				FA6167941D3ACCB90049FA14 /* DraggedDataTests.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		C5A4B2022FC9D76000B71510 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = C5A4B2012FC9D76000B71510 /* plugin:SwiftLintBuildToolPlugin */;
+			productRef = C5A4B2012FC9D76000B71510 /* SwiftLintBuildToolPlugin */;
 		};
 		C5A4B2032FC9D76000B71510 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = C5A4B2012FC9D76000B71510 /* plugin:SwiftLintBuildToolPlugin */;
+			productRef = C5A4B2012FC9D76000B71510 /* SwiftLintBuildToolPlugin */;
 		};
 		FAC43DDA1B35D8B100C06102 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -852,7 +861,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FAC43DE01B35D8B100C06102 /* Debug */ = {
+		FAC43DE01B35D8B100C06102 /* Debug configuration for PBXProject "Clipy" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -910,7 +919,7 @@
 			};
 			name = Debug;
 		};
-		FAC43DE11B35D8B100C06102 /* Release */ = {
+		FAC43DE11B35D8B100C06102 /* Release configuration for PBXProject "Clipy" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -961,7 +970,7 @@
 			};
 			name = Release;
 		};
-		FAC43DE31B35D8B100C06102 /* Debug */ = {
+		FAC43DE31B35D8B100C06102 /* Debug configuration for PBXNativeTarget "Clipy" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -989,7 +998,7 @@
 			};
 			name = Debug;
 		};
-		FAC43DE41B35D8B100C06102 /* Release */ = {
+		FAC43DE41B35D8B100C06102 /* Release configuration for PBXNativeTarget "Clipy" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1018,7 +1027,7 @@
 			};
 			name = Release;
 		};
-		FAC43DE61B35D8B100C06102 /* Debug */ = {
+		FAC43DE61B35D8B100C06102 /* Debug configuration for PBXNativeTarget "ClipyTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1046,7 +1055,7 @@
 			};
 			name = Debug;
 		};
-		FAC43DE71B35D8B100C06102 /* Release */ = {
+		FAC43DE71B35D8B100C06102 /* Release configuration for PBXNativeTarget "ClipyTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1076,33 +1085,41 @@
 		FAC43DC11B35D8B100C06102 /* Build configuration list for PBXProject "Clipy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAC43DE01B35D8B100C06102 /* Debug */,
-				FAC43DE11B35D8B100C06102 /* Release */,
+				FAC43DE01B35D8B100C06102 /* Debug configuration for PBXProject "Clipy" */,
+				FAC43DE11B35D8B100C06102 /* Release configuration for PBXProject "Clipy" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		FAC43DE21B35D8B100C06102 /* Build configuration list for PBXNativeTarget "Clipy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAC43DE31B35D8B100C06102 /* Debug */,
-				FAC43DE41B35D8B100C06102 /* Release */,
+				FAC43DE31B35D8B100C06102 /* Debug configuration for PBXNativeTarget "Clipy" */,
+				FAC43DE41B35D8B100C06102 /* Release configuration for PBXNativeTarget "Clipy" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		FAC43DE51B35D8B100C06102 /* Build configuration list for PBXNativeTarget "ClipyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAC43DE61B35D8B100C06102 /* Debug */,
-				FAC43DE71B35D8B100C06102 /* Release */,
+				FAC43DE61B35D8B100C06102 /* Debug configuration for PBXNativeTarget "ClipyTests" */,
+				FAC43DE71B35D8B100C06102 /* Release configuration for PBXNativeTarget "ClipyTests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C587AF4F2FBF4E040043D5E7 /* XCRemoteSwiftPackageReference "sqlite-data" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/sqlite-data";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.6.1;
+			};
+			traits = (
+				SQLiteDataTagged,
+			);
+		};
 		C5A4B2002FC9D76000B71510 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
@@ -1202,7 +1219,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C5A4B2012FC9D76000B71510 /* plugin:SwiftLintBuildToolPlugin */ = {
+		C587AF502FBF4E040043D5E7 /* SQLiteData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C587AF4F2FBF4E040043D5E7 /* XCRemoteSwiftPackageReference "sqlite-data" */;
+			productName = SQLiteData;
+		};
+		C5A4B2012FC9D76000B71510 /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C5A4B2002FC9D76000B71510 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";
