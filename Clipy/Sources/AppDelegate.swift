@@ -14,7 +14,6 @@ import Cocoa
 import Dependencies
 import LoginServiceKit
 import Magnet
-import RealmSwift
 import RxCocoa
 import RxSwift
 import Screeen
@@ -35,14 +34,18 @@ class AppDelegate: NSObject, NSMenuItemValidation {
     private var pasteboardHistoryRepository
     @Dependency(\.snippetRepository)
     private var snippetRepository
+    private let migration = DatabaseMigration()
 
     // MARK: - Init
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Migrate Realm
-        Realm.migration()
+        // If the SQLite database file does not exist yet, start the database and then migrate Realm data to SQLiteData.
+        let sqliteDatabaseExists = (try? SQLiteDataDatabase.databaseURL().checkResourceIsReachable()) ?? false
         prepareDependencies { values in
             try! values.bootstrapDatabase()
+            if !sqliteDatabaseExists {
+                migration.migrateFromRealmToSQLiteData()
+            }
         }
     }
 
