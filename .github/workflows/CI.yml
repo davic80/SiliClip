@@ -25,7 +25,7 @@ jobs:
           CODE_SIGN_IDENTITY=- \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
-          -scheme Clipy \
+          -scheme SiliClip \
           -project Clipy.xcodeproj \
           -clonedSourcePackagesDirPath "$GITHUB_WORKSPACE/.spm-cache/SourcePackages" \
           -packageCachePath "$GITHUB_WORKSPACE/.spm-cache/PackageCache" \
@@ -41,7 +41,7 @@ jobs:
           CODE_SIGNING_ALLOWED=NO \
           ARCHS=arm64 \
           ONLY_ACTIVE_ARCH=NO \
-          -scheme Clipy \
+          -scheme SiliClip \
           -project Clipy.xcodeproj \
           -configuration Release \
           -derivedDataPath "$GITHUB_WORKSPACE/build" \
@@ -51,5 +51,5 @@ jobs:
           -skipMacroValidation \
           clean build
 
-        binary="$GITHUB_WORKSPACE/build/Build/Products/Release/Clipy.app/Contents/MacOS/Clipy"
+        binary="$GITHUB_WORKSPACE/build/Build/Products/Release/SiliClip.app/Contents/MacOS/SiliClip"
         lipo "$binary" -verify_arch arm64

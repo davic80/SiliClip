@@ -2,9 +2,9 @@ name: CodeQL
 
 on:
   push:
-    branches: ["develop", "master"]
+    branches: ["main"]
   pull_request:
-    branches: ["develop", "master"]
+    branches: ["main"]
   schedule:
     - cron: '0 9 * * 0'
 
@@ -55,7 +55,7 @@ jobs:
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
           -project Clipy.xcodeproj \
-          -scheme Clipy \
+          -scheme SiliClip \
           -clonedSourcePackagesDirPath "$GITHUB_WORKSPACE/.spm-cache/SourcePackages" \
           -packageCachePath "$GITHUB_WORKSPACE/.spm-cache/PackageCache" \
           -skipPackagePluginValidation \
