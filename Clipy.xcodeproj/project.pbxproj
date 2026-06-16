@@ -685,12 +685,12 @@
 			dependencies = (
 				C5A4B2022FC9D76000B71510 /* PBXTargetDependency */,
 			);
-			name = Clipy;
+			name = SiliClip;
 			packageProductDependencies = (
 				C5700B4B2FC5C3D500C8F965 /* Dependencies */,
 				C53FC6BF2FCCA1C400219A25 /* Collections */,
 			);
-			productName = Clipy;
+			productName = SiliClip;
 			productReference = FAC43DC61B35D8B100C06102 /* Clipy.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -1221,7 +1221,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clipyapp.$(PRODUCT_NAME:rfc1034identifier)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clipy.app/Contents/MacOS/Clipy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SiliClip.app/Contents/MacOS/SiliClip";
 			};
 			name = Debug;
 		};
@@ -1235,7 +1235,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clipyapp.$(PRODUCT_NAME:rfc1034identifier)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clipy.app/Contents/MacOS/Clipy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SiliClip.app/Contents/MacOS/SiliClip";
 			};
 			name = Release;
 		};

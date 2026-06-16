@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FAC43DC51B35D8B100C06102"
-               BuildableName = "Clipy.app"
-               BlueprintName = "Clipy"
+               BuildableName = "SiliClip.app"
+               BlueprintName = "SiliClip"
                ReferencedContainer = "container:Clipy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FAC43DC51B35D8B100C06102"
-            BuildableName = "Clipy.app"
-            BlueprintName = "Clipy"
+            BuildableName = "SiliClip.app"
+            BlueprintName = "SiliClip"
             ReferencedContainer = "container:Clipy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -78,8 +78,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FAC43DC51B35D8B100C06102"
-            BuildableName = "Clipy.app"
-            BlueprintName = "Clipy"
+            BuildableName = "SiliClip.app"
+            BlueprintName = "SiliClip"
             ReferencedContainer = "container:Clipy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FAC43DC51B35D8B100C06102"
-            BuildableName = "Clipy.app"
-            BlueprintName = "Clipy"
+            BuildableName = "SiliClip.app"
+            BlueprintName = "SiliClip"
             ReferencedContainer = "container:Clipy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
