@@ -16,26 +16,26 @@ final class ScreenShotObserver: NSObject {
     func start() {
         guard query == nil else { return }
 
-        let q = NSMetadataQuery()
-        q.predicate = NSPredicate(format: "%K == YES", "kMDItemIsScreenCapture")
-        q.searchScopes = [NSMetadataQueryUserHomeScope]
-        q.notificationBatchingInterval = 1.0
+        let metadataQuery = NSMetadataQuery()
+        metadataQuery.predicate = NSPredicate(format: "%K == YES", "kMDItemIsScreenCapture")
+        metadataQuery.searchScopes = [NSMetadataQueryUserHomeScope]
+        metadataQuery.notificationBatchingInterval = 1.0
 
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(queryDidUpdate(_:)),
             name: .NSMetadataQueryDidUpdate,
-            object: q
+            object: metadataQuery
         )
 
-        query = q
-        q.start()
+        query = metadataQuery
+        metadataQuery.start()
     }
 
     func stop() {
-        guard let q = query else { return }
-        NotificationCenter.default.removeObserver(self, name: .NSMetadataQueryDidUpdate, object: q)
-        q.stop()
+        guard let activeQuery = query else { return }
+        NotificationCenter.default.removeObserver(self, name: .NSMetadataQueryDidUpdate, object: activeQuery)
+        activeQuery.stop()
         query = nil
     }
 
