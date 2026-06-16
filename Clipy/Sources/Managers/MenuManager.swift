@@ -201,7 +201,7 @@ private extension MenuManager {
         clipMenu?.addItem(NSMenuItem(title: String(localized: "Edit Snippets"), action: #selector(AppDelegate.showSnippetEditorWindow)))
         clipMenu?.addItem(NSMenuItem(title: String(localized: "Preferences"), action: #selector(AppDelegate.showPreferenceWindow)))
         clipMenu?.addItem(NSMenuItem.separator())
-        clipMenu?.addItem(NSMenuItem(title: String(localized: "Quit Clipy"), action: #selector(AppDelegate.terminate)))
+        clipMenu?.addItem(NSMenuItem(title: String(localized: "Quit SiliClip"), action: #selector(AppDelegate.terminate)))
 
         statusBarItem.menu = clipMenu
     }

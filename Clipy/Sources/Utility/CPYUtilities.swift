@@ -11,7 +11,6 @@
 //
 
 import Cocoa
-import Firebase
 import IOKit
 
 final class CPYUtilities {
@@ -37,11 +36,6 @@ final class CPYUtilities {
 
     static func initSDKs() {
         AppEnvironment.current.defaults.register(defaults: ["NSApplicationCrashOnExceptions": true])
-        guard AppEnvironment.current.defaults.bool(forKey: Constants.UserDefaults.collectCrashReport) else { return }
-        guard let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") else { return }
-        guard let options = FirebaseOptions(contentsOfFile: path) else { return }
-        guard FirebaseApp.app() == nil else { return }
-        FirebaseApp.configure(options: options)
     }
 
     static func registerUserDefaultKeys() {
@@ -57,7 +51,6 @@ final class CPYUtilities {
         defaultValues.updateValue(storeTypes, forKey: Constants.UserDefaults.storeTypes)
         defaultValues.updateValue(NSNumber(value: true), forKey: Constants.UserDefaults.inputPasteCommand)
         defaultValues.updateValue(NSNumber(value: true), forKey: Constants.UserDefaults.reorderClipsAfterPasting)
-        defaultValues.updateValue(NSNumber(value: true), forKey: Constants.UserDefaults.collectCrashReport)
 
         /* Menu */
         defaultValues.updateValue(NSNumber(value: 16), forKey: Constants.UserDefaults.menuIconSize)

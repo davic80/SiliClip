@@ -16,7 +16,6 @@ import LoginServiceKit
 import Magnet
 import RxCocoa
 import RxSwift
-import Screeen
 import Sparkle
 
 @NSApplicationMain
