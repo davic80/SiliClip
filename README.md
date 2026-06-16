@@ -1,72 +1,59 @@
-<div align="center">
-  <img src="./Resources/clipy_logo.png" width="400">
-</div>
+# SiliClip
 
-<br>
+A native Apple Silicon clipboard manager for macOS — a fork of [Clipy](https://github.com/Clipy/Clipy), rewritten to run natively on ARM64.
 
-![CI](https://github.com/Clipy/Clipy/workflows/CI/badge.svg)
-[![Release version](https://img.shields.io/github/release/Clipy/Clipy.svg)](https://github.com/Clipy/Clipy/releases/latest)
-[![OpenCollective](https://opencollective.com/clipy/backers/badge.svg)](#backers)
-[![OpenCollective](https://opencollective.com/clipy/sponsors/badge.svg)](#sponsors)
-
-Clipy is a Clipboard extension app for macOS.
+> **This is a fork of [Clipy](https://github.com/Clipy/Clipy) by the Clipy Project (MIT license).**
+> Clipy runs via Rosetta 2 on Apple Silicon. SiliClip removes that dependency by targeting ARM64 natively and replacing archived third-party libraries with native macOS APIs.
 
 ---
 
-__Requirement__: macOS 13 Ventura or later
+## What's different from Clipy
 
-__Distribution Site__ : <https://clipy-app.com>
+| | Clipy | SiliClip |
+|---|---|---|
+| Architecture | Intel (x86_64) via Rosetta 2 | ARM64 native |
+| Swift | 5.0 | 6.0 |
+| Screenshot detection | [Screeen](https://github.com/Clipy/Screeen) (archived) | Native `NSMetadataQuery` |
+| Analytics | Firebase (optional) | Removed |
 
-<img src="http://clipy-app.com/img/screenshot1.png" width="400">
+Everything else — features, UX, keyboard shortcuts, snippet editor — works exactly the same as Clipy.
 
-### Development Environment
-* macOS 26 Tahoe
-* Xcode 26.5
+## Features
 
-### How to Build
-macOS checks Accessibility permission by the app's code signature. If Clipy is built without a stable signing certificate, macOS may ask for Accessibility permission again for every build.
+- Clipboard history saved to disk
+- Snippet manager for frequently used text
+- Menu bar access with keyboard shortcuts
+- Screenshot capture to clipboard history (native, no third-party dependency)
+- Auto-launch at login
 
-For this reason, the default signing settings use the Clipy signing certificate. This certificate is available only to the maintainer, so local builds require switching to ad-hoc signing before building.
+## Requirements
 
-#### Build for ad-hoc usage
-1. Open `Clipy.xcodeproj` in Xcode.
-2. Switch to ad-hoc build mode:
-    1. Open `Configurations/CodeSigning.xcconfig`.
-    2. Uncomment `#include "Configurations/CodeSigning-AdHoc.xcconfig"`.
-3. Build the `Clipy` scheme.
+- macOS 13 Ventura or later
+- Apple Silicon Mac (M1 or later)
 
-If you want to use Firebase features, place your own `GoogleService-Info.plist` in `Clipy/GoogleService`. This file is not required for local builds without Firebase.
+## Building
 
-### Localization Contributors
-Clipy is looking for localization contributors.  
-If you can contribute, please see [CONTRIBUTING.md](https://github.com/Clipy/Clipy/blob/master/.github/CONTRIBUTING.md)
+Open `Clipy.xcodeproj` in Xcode 16 or later. All dependencies are managed via Swift Package Manager — no extra steps needed.
 
-### Distribution
-If you distribute derived work, especially in the Mac App Store, I ask you to follow two rules:
+For local development, switch to ad-hoc signing:
 
-1. Don't use `Clipy` and `ClipMenu` as your product name.
-2. Follow the MIT license terms.
+1. Open `Configurations/CodeSigning.xcconfig`
+2. Uncomment `#include "Configurations/CodeSigning-AdHoc.xcconfig"`
+3. Build the `Clipy` scheme
 
-Thank you for your cooperation.
+## License
 
-### Privacy Policy
-Please see [PRIVACY.md](./PRIVACY.md) for information about local data storage,
-network communication, analytics, and crash reporting.
+MIT — see [LICENSE](LICENSE).
 
-### Backers
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/clipy#backer)]
+Original work copyright © 2015–2018 Clipy Project.
+Modifications copyright © 2026 davic80.
 
-<a href="https://opencollective.com/clipy#backers"><img src="https://opencollective.com/clipy/backers.svg?avatarHeight=36&width=600" /></a>
+## Credits
 
-### Sponsors
-Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/clipy#sponsor)]
-
-<a href="https://opencollective.com/clipy#sponsors"><img src="https://opencollective.com/clipy/sponsors.svg?avatarHeight=36&width=600" /></a>
-
-### Licence
-Clipy is available under the MIT license. See the LICENSE file for more info.
-
-Icons are copyrighted by their respective authors.
-
-### Special Thanks
-__Thank you for [@naotaka](https://github.com/naotaka) who have published [ClipMenu](https://github.com/naotaka/ClipMenu) as OSS.__
+- [Clipy](https://github.com/Clipy/Clipy) — original project this is based on
+- [Magnet](https://github.com/Clipy/Magnet) — keyboard shortcut handling
+- [RxSwift](https://github.com/ReactiveX/RxSwift) — reactive bindings
+- [Sparkle](https://github.com/sparkle-project/Sparkle) — auto-updates
+- [swift-dependencies](https://github.com/pointfreeco/swift-dependencies) — dependency injection
+- [sqlite-data](https://github.com/pointfreeco/sqlite-data) — persistence
+- [@naotaka](https://github.com/naotaka) — original [ClipMenu](https://github.com/naotaka/ClipMenu), which Clipy is based on
