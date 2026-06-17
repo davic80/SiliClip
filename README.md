@@ -26,6 +26,18 @@ Everything else — features, UX, keyboard shortcuts, snippet editor — works e
 - Screenshot capture to clipboard history (native, no third-party dependency)
 - Auto-launch at login
 
+## Installation
+
+Download the DMG from the [Releases](https://github.com/davic80/SiliClip/releases) page, open it, and drag SiliClip to your Applications folder.
+
+Since SiliClip is not notarized, macOS will show a "damaged" error on first launch. Run this once in Terminal to clear the quarantine flag:
+
+```bash
+xattr -d com.apple.quarantine /Applications/SiliClip.app
+```
+
+Then open the app normally.
+
 ## Requirements
 
 - macOS 13 Ventura or later
