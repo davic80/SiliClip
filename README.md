@@ -41,6 +41,18 @@ For local development, switch to ad-hoc signing:
 2. Uncomment `#include "Configurations/CodeSigning-AdHoc.xcconfig"`
 3. Build the `Clipy` scheme
 
+## Privacy & Security
+
+SiliClip has been audited to confirm that no clipboard data or personal information is transmitted outside the device.
+
+**What was verified:**
+
+- **No network calls in app code** — zero uses of `URLSession`, `URLRequest`, or any socket API in the source
+- **Firebase removed** — analytics and crash reporting from the original Clipy have been fully stripped
+- **CloudKit disabled** — there is code scaffolding for a future optional iCloud sync feature, but it is explicitly set to `startImmediately: false` and no iCloud entitlements are configured; it never runs
+- **Sparkle (auto-updater)** — present but has no appcast URL configured, so it cannot contact any update server; the auto-check toggle in Preferences is a no-op until an appcast is published
+- **All clipboard data stays local** — stored in SQLite and Realm databases under `~/Library/Application Support/SiliClip`
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
